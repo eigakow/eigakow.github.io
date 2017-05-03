@@ -1,0 +1,68 @@
+<html>
+<head>
+ <!-- From bootstrap-->
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>TwitchTV Viewer</title>
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="bootstrap-3.3.7-dist/css/bootstrap.min.css">
+
+</head>
+<body>
+  <div class="container" id ="mainBox">
+    <div class="row">
+      <div class="col-md-1 col-xs-1 col-lg-2">
+      </div> <!-- end first col -->
+      <div class="col-md-10 col-xs-10 col-lg-8" id="title">
+        <h2>TwitchTV Streamers</h2>
+      </div> <!-- end main col-->
+    </div> <!-- end first row -->
+
+    <div id="exTab1" class="container">
+      <div class="row">
+        <div class="col-md-1 col-xs-1 col-lg-2">
+        </div> <!-- end first col -->
+        <div class="col-md-10 col-xs-10 col-lg-8">
+          <ul  class="nav nav-tabs">
+            <li class="active"><a  href="#1a" data-toggle="tab">All</a></li>
+            <li><a href="#2a" data-toggle="tab">Online</a></li>
+            <li><a href="#3a" data-toggle="tab">Offline</a></li>
+          </ul>
+        </div> <!-- end main col-->
+      </div> <!-- end first row -->
+      <div class="row">
+        <div class="col-md-1 col-xs-1 col-lg-2">
+        </div> <!-- end first col -->
+        <div class="col-md-10 col-xs-10 col-lg-8">
+          <div class="tab-content clearfix">
+            <div class="tab-pane active" id="1a">
+              <table class="table table-hover">
+                <tbody id="tableBody_all"> <!-- here table will be inserted -->
+                </tbody>
+              </table>
+            </div>
+            <div class="tab-pane" id="2a">
+              <table class="table table-hover">
+                <tbody id="tableBody_on"> <!-- here table will be inserted -->
+                </tbody>
+              </table>
+            </div>
+            <div class="tab-pane" id="3a">
+              <table class="table table-hover">
+                <tbody id="tableBody_off"> <!-- here table will be inserted -->
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+  </div> <!--end main container-->
+
+  <script src="jquery/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="scripts.js" ></script>
+  <script src="bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+var streamList = [["ESL_SC2","images/esl_sc2.jpeg"],[ "OgamingSC2","images/OgamingSC2"],
+                  ["cretetion","images/cretetion"], ["freecodecamp","images/freecodecamp"],
+                  ["storbeck","images/404_user.png"], ["habathcx","images/habathcx"],
+                  ["RobotCaleb","images/RobotCaleb"], ["noobs2ninjas","images/noobs2ninjas"], ["comster404",""]]
+
+$(document).ready(function() {
+  for (var x=0; x< streamList.length; x++) {
+    var state = "N/A";
+    var content = "" ;
+    var url_user = "https://wind-bow.gomix.me/twitch-api/users/" + streamList[x][0] + "?callback=?";
+    var url = "https://wind-bow.gomix.me/twitch-api/streams/" + streamList[x][0] + "?callback=?";
+
+    $.getJSON(url, (function(thisx) {
+      return function(data) {
+        printStatus(data,thisx);
+      };
+    }(x)) // calling the function with the current value
+  ).fail(function(d, textStatus, error) {
+    console.error("getJSON failed, status: " + textStatus + ", error: "+error)
+    });
+  }
+});
+
+$(".clickable-row").click(function() {
+  console.log("Clicked on a row!");
+  window.open($(this).data("href"), '_blank');
+  window.location = $(this).data("href");
+});
+
+function printStatus(data,x) {
+  console.log(data);
+  if (data.stream != null) {
+    console.log ("Found online stream!");
+    state = "online";
+    col_state = "success";
+    label_state = "success";
+    content = data.stream.channel.game + ": " + data.stream.channel.status ;
+  }
+  else {
+    state = "offline";
+    col_state = "";
+    label_state = "default";
+    content="";
+  }
+  var link = '<a href=https://www.twitch.tv/'+ streamList[x][0] +' target="_blank" >';
+  $("#tableBody").append('<tr class="'+ col_state +'">'+link+'<td>'+link+'<img src="'+streamList[x][1]+'   " /></td><td><h4>' + link + streamList[x][0] +'</h4><span class="label label-'+ label_state +'">'+ state +'</span><br /><br /><small class="text-muted">'+content+'</small></td></tr>');
+
+}

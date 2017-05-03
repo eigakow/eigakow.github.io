@@ -1,0 +1,33 @@
+#mainBox {
+  margin-top: 50px;
+  margin-left:25px;
+  margin-right:25px;
+  border-radius: 10px;
+}
+#title {
+  margin-bottom: 15px;
+}
+
+td a {
+  color: inherit; /* blue colors for links too */
+  text-decoration: inherit; /* no underline */
+}
+table tr td {
+    padding-left: 0;
+    padding-right: 0;
+    text-align:left;
+    vertical-align:middle;
+//    height:100%;
+//    width:100%;
+
+}
+img {
+   border-radius: 50%;
+   width: 75px;
+   height: 75px;
+}
+.smallCell
+{
+    width: 1px;
+    white-space: nowrap;
+}
