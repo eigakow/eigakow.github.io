@@ -1,0 +1,35 @@
+body {
+  background-image: url("https://www.dropbox.com/s/2kaeo7i23b2bs1f/asanoha-400px.png?raw=1");
+}
+#box {
+  margin: auto;
+  width: 450px;
+  border-radius: 10px;
+  text-align: center;
+  margin-top: 50px;
+  padding: 40px 10px 40px 10px;
+  font-family: 'Gloria Hallelujah', cursive;
+  background-color:rgba(0, 0, 0, 0.5);
+  color: white;
+}
+.title {
+  font-size: 25px;
+  font-weight: bold;
+}
+#measures {
+  padding-top:20px;
+  font-size: 20px;
+}
+.sign {
+  color: grey;
+  padding-top: 25px;
+  font-size: 13px;
+}
+#refl {
+  color: inherit;
+  text-decoration:none;
+}
+#description {
+  padding-top:40px;
+  font-size: 40px;
+}

@@ -1,0 +1,80 @@
+<html>
+<head>
+
+  <link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah" rel="stylesheet">
+  <link rel="stylesheet" href="bootstrap-3.3.7-dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="style.css">
+
+<!-- Weather icons-->
+  <link rel="stylesheet" href="weather_icons/css/weather-icons.min.css">
+  <link rel="stylesheet" href="weather_icons/css/weather-icons-wind.min.css">
+
+</head>
+<body>
+  <div class="container" id="box">
+    <div class="row">
+      <div class="col-md-12 col-xs-12">
+        <p class="title">LOCAL WEATHER<br/>in<br/><span id="city">...</span></p>
+      </div>
+    </div> <!--end row-->
+    <div class="row" id="measures">
+      <div class="col-md-4 col-xs-4" id="dtemp">
+        <p><i class="wi
+wi-thermometer"></i> <span id="ptemp">-</span> <i class="wi
+wi-celsius scale"></i></p>
+      </div>
+      <div class="col-md-4 col-xs-4" id="dhumid">
+        <p><i class="wi
+wi-humidity"></i> <span id="phumid">-</span> %</p>
+      </div>
+      <div class="col-md-4 col-xs-4" id="dwind">
+        <p><i class="wi
+          wi-windy"></i> <span id="pwind">-</span> m/s</p>
+      </div>
+    </div> <!--end 2nd row-->
+    <div class="row" id="description" class ="text-center">
+      <div class="col-md-8 col-xs-8" id="cweather">
+        <p id="pweather"></p>
+      </div>
+      <div class="col-md-4 col-xs-4" id="cicon">
+        <canvas id="picon" width="100" height="100"></canvas>
+      </div>
+    </div> <!--end 3rd row-->
+  </div> <!--end container -->
+  <div>
+    <p class="ref text-center">Powered by <a href="https://darksky.net/poweredby/" id="refl" target="_blank">Dark Sky</a></p>
+    <p class="sign text-center">by iga</p>
+  </div>
+
+
+  <script src="jquery/jquery-3.2.1.min.js"></script>
+  <script src="bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="https://rawgithub.com/darkskyapp/skycons/master/skycons.js"></script>
+  <script type="text/javascript" src="script.js" ></script>
+
+</body>
+
+  <script>
+  var icons = new Skycons({"color":"white"}),
+    list = [
+      "clear-day",
+      "clear-night",
+      "partly-cloudy-day",
+      "partly-cloudy-night",
+      "cloudy",
+      "rain",
+      "sleet",
+      "snow",
+      "wind",
+      "fog"
+     ],
+    i;
+
+for (i = list.length; i--;)
+  icons.set(list[i], list[i]);
+
+icons.play();
+
+</script>
+
+</html>
