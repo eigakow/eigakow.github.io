@@ -1,0 +1,39 @@
+body {
+  background-color: #3F51B5;
+}
+#box {
+  margin: auto;
+  width: 600px;
+  border-radius: 3px;
+  text-align: center;
+  margin-top: 100px;
+  padding: 50px 75px;
+  background: white
+}
+#quote {
+  background-color: white;
+  color: #3F51B5;
+}
+#author {
+  color: #3F51B5;
+  text-right;
+  font-family: 'Josefin Slab', serif;
+  font-size: 18px;
+}
+#thirdrow {
+  padding-top: 25px;
+}
+#bquote, #btwitt {
+  background-color: #3F51B5;
+  color: white;
+}
+#pquote {
+  font-size: 27px;
+  font-family: 'Josefin Slab', serif;
+  font-weight: bold;
+}
+.sign {
+  color: white;
+  padding-top: 17px;
+  font-size: 13px;
+}
