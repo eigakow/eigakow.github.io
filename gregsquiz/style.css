@@ -1,0 +1,40 @@
+
+.question {
+  font-size: 24px;
+  margin-bottom: 40px;
+  margin-top: 50px;
+}
+
+.solution {
+  font-size: 24px;
+  margin-top: 40px;
+  text-align: center;
+}
+
+.seeanswer {
+  text-align: center;
+}
+
+#nextQuestion {
+   cursor:pointer;
+}
+
+.score {
+  text-align: right;
+}
+
+.header {
+  margin-top: 10px;
+}
+
+.endscreen {
+  margin-bottom: 40px;
+  margin-top: 50px;
+  text-align: center;
+  font-size: 24px;
+}
+.retake {
+  font-size: 16px;
+  margin-top: 40px;
+  text-align: center;
+}

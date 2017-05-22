@@ -1,0 +1,70 @@
+<html>
+<head>
+ <!-- From bootstrap-->
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Greg's Quiz</title>
+
+  <link rel="stylesheet" href="bootstrap-3.3.7-bootswatch-superhero/css/bootstrap.min.css">
+
+  <link rel="stylesheet" href="fontawesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="style.css">
+
+
+</head>
+<body>
+
+  <div class="container header">
+    <div class="col-xs-1 col-md-1 col-lg-3"></div>
+    <div class="col-xs-10 col-md-10 col-lg-6">
+    Question <span id="questionCount"></span>
+    </div>
+  </div>
+
+  <div class="container question">
+    <div class="col-xs-1 col-md-1 col-lg-3"></div>
+    <div class="col-xs-10 col-md-10 col-lg-6">
+      <i class="fa fa-question-circle-o fa-2x"></i>&nbsp;&nbsp;
+      <span id="question"></span>
+    </div>
+    <div class="col-xs-1 col-md-1 col-lg-3">
+      <i class="fa fa-arrow-circle-o-right fa-2x" id="nextQuestion"></i>
+    </div>
+  </div>
+
+  <div class="row cotainer response">
+    <div class="col-xs-2 col-md-2 col-lg-3"></div>
+    <div class="col-xs-8 col-md-8 col-lg-6">
+      <form class="form-group">
+        <input type="text" class="form-control" placeholder="Response..." id="response">
+      </form>
+    </div>
+    <div class="col-xs-2 col-md-2 col-lg-3">
+      <span class="score">0/20</span>
+    </div>
+  </div>
+
+  <div class="container seeanswer">
+    <div class="col-xs-1 col-md-1 col-lg-3"></div>
+    <div class="col-xs-10 col-md-10 col-lg-6">
+      <span id="seeanswerclick">
+      <a class="btn btn-default" href="#" role="button" ><i class="fa fa-repeat" aria-hidden="true"></i>&nbsp;&nbsp;
+        See answer</a></span>
+    </div>
+  </div>
+
+  <div class="container solution">
+    <div class="col-xs-1 col-md-1 col-lg-3"></div>
+    <div class="col-xs-10 col-md-10 col-lg-6">
+      <span id="solution"></span>
+    </div>
+  </div>
+
+
+  <script src="jquery/jquery-3.2.1.min.js"></script>
+  <script src="bootstrap-3.3.7-bootswatch-superhero/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="script.js" ></script>
+</body>
+</html>
