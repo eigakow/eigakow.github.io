@@ -90,10 +90,6 @@ document.getElementById("nextQuestion").addEventListener("click", generateQuesti
 
 document.getElementById("seeanswerclick").addEventListener("click", showAnswer, false);
 
-$('.enter_link').click(function () {
-    $(this).parent('#splashscreen').fadeOut(500);
-});
-
 $('body').keypress(function (event) {
   if (event.which == 13 && questionsolved ) {
     event.preventDefault();

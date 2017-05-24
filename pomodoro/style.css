@@ -1,0 +1,68 @@
+
+*, *:before, *:after {
+    -webkit-user-select: none; /* Chrome/Safari */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+ */
+}
+
+body {
+  background-color: #D7CEC7;
+}
+
+h2 {
+  margin-top: 30px;
+  color: #76323F;
+  text-align: center;
+
+}
+.arrow {
+  cursor:pointer;
+}
+
+.session {
+  height: 100px;
+  line-height: 100px;
+  text-align: center;
+}
+
+p {
+  display: inline-block;
+  vertical-align: middle;
+  line-height: normal;
+}
+
+#progressCircle {
+  margin-top: 50px;
+  cursor:pointer;
+  margin-bottom: 20px;
+}
+#start {
+    margin-top: 150px;
+    margin-bottom: 20px;
+}
+
+canvas {
+  position: absolute;
+  top:0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin:auto;
+
+}
+
+#start > div {
+  line-height: 120%;
+}
+.mode {
+  font-size: 18px;
+}
+
+.sign {
+  color: #565656;
+  font-size: 13px;
+  text-align: center;
+  position: absolute;
+  width: 100%;
+  padding-top: -50px;
+}
