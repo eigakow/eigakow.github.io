@@ -39,6 +39,7 @@ function startClock() {
 
         if (timer < 0) {
           progress_circle.gmpc('percent', 100);
+          playSound();
           sessionOn = false;
           timerBreak = breakI * 60;
           timer = sessionI * 60;
@@ -53,6 +54,7 @@ function startClock() {
         progress_circle.gmpc('percent', 100*(breakI*60-timerBreak)/(breakI*60));
         if (timerBreak < 0) {
           progress_circle.gmpc('percent', 100);
+          playSound();
           sessionOn = true;
           timerBreak = breakI * 60;
           timer = sessionI * 60;
@@ -151,3 +153,8 @@ function decreaseSession() {
   }
   $('#sessionLength').html(sessionI);
 }
+
+function playSound() {
+      var sound = document.getElementById("audio");
+      sound.play();
+  }
