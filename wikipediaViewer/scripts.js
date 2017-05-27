@@ -11,7 +11,7 @@ $(document).ready(function() {
 
     if (search !== null && search !== undefined && search !== ""){
       //Remove old search
-      $( ".panel-info" ).remove();
+      $( "#searchResult" ).empty();
 
       //API details at https://www.mediawiki.org/wiki/API:Opensearch
       var url="https://en.wikipedia.org/w/api.php?action=opensearch&format=json&search=" + search +
