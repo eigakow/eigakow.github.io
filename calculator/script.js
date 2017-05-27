@@ -48,7 +48,6 @@ function numberPressed(d) {
     totalDigit = "";
   }
   if (!operationAllowed) { //so beginning of a new number
-    console.log("Pressed as a first digit of a number: " + d);
     if (d == ".") {
       currentDigit += "0.";
       totalDigit += "0.";
@@ -57,6 +56,7 @@ function numberPressed(d) {
     }
     else if (d === "0") {
       // skip adding it, still beginning of a new number
+      return;
     }
     else {
       console.log("Inside 'else'");
