@@ -1,0 +1,56 @@
+<html>
+<head>
+ <!-- From bootstrap-->
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>TicTacToe</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Carter+One|Ceviche+One|Cherry+Cream+Soda|Chewy|Permanent+Marker|Unica+One|Walter+Turncoat" rel="stylesheet">
+  <link rel="stylesheet" href="fontawesome/css/font-awesome.min.css">
+
+  <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+  <div class="main container">
+    <div class="header">
+      <button class="reset">
+        <i class="fa fa-refresh" aria-hidden="true"></i>
+      </button>
+      <div class="score"><span id="player1"></span> <span id="result">2:3</span> <span id="player2"></span></div>
+      <div class="turn">
+        <span>Your turn</span>
+      </div>
+    </div>
+    <div class="box">
+      <canvas id="myCanvas" height="360" width="360">Sorry, your browser doesn't support canvas</canvas>
+      <div id="startGame">
+        <p id="first">Choose the game mode:</p>
+        <button class="startButton" id="oneM">Single Player</button>
+        <button class="startButton" id="twoM">Two Players</button>
+      </div>
+      <div id="secondPanel">
+        <p id="second">Player 1,<br />Choose your symbol:</p>
+        <button class="symbolButton" id="X">X</button>
+        <button class="symbolButton" id="0">0</button>
+      </div>
+      <div id="endGame"></div>
+      <button class="field" id ="00"><span></span></button>
+      <button class="field" id ="01"><span></span></button>
+      <button class="field" id ="02"><span></span></button>
+      <button class="field" id ="10"><span></span></button>
+      <button class="field" id ="11"><span></span></button>
+      <button class="field" id ="12"><span></span></button>
+      <button class="field" id ="20"><span></span></button>
+      <button class="field" id ="21"><span></span></button>
+      <button class="field" id ="22"><span></span></button>
+    </div><!-- box -->
+  </div> <!-- main container -->
+
+  <script src="jquery/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="script.js" ></script>
+
+</body>
+</html>

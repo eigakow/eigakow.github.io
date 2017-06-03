@@ -1,0 +1,196 @@
+/* font-family: 'Chewy', cursive;
+font-family: 'Permanent Marker', cursive;
+font-family: 'Unica One', cursive; nope
+font-family: 'Ceviche One', cursive; nope
+font-family: 'Cherry Cream Soda', cursive;
+font-family: 'Walter Turncoat', cursive;
+font-family: 'Carter One', cursive;
+
+*/
+
+
+body {
+  font-family: 'Walter Turncoat', cursive;
+  background-image: url("images/bubble_wallpaper_widescreen_inspiring.jpg");
+  background-size: cover;
+  text-align: center
+}
+
+.box {
+  width: 360px;
+  height: 360px;
+  margin: 20px auto;
+  position: relative;
+}
+
+canvas {
+  background-color: rgba(49, 152, 167, 0.5);
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: none;
+//    visibility: hidden;
+//  z-index: 0;
+}
+
+#endGame {
+  position: absolute;
+  top: 0;
+  bottom:0;
+  left: 0;
+  right:0;
+  padding: 100px 0 120px 0;
+  background-color: rgba(27, 65, 83, 0.7);
+  color:  #C66D5E;
+  z-index: 1;
+  font-size: 50px;
+  text-align: center;
+  display: none;
+//  visibility: hidden;
+//  z-index: 0;
+}
+
+#startGame,#secondPanel {
+  position: absolute;
+  top: 0;
+  bottom:0;
+  left: 0;
+  right:0;
+  background-color: rgba(27, 65, 83, 0.5);
+  color: #C66D5E;
+  font-size: 40px;
+  text-align: center;
+  display: none;
+//  visibility: hidden;
+}
+
+/*#secondPanel {
+  position: absolute;
+  top: 0;
+  bottom:0;
+  left: 0;
+  right:0;
+  background-color: rgba(27, 65, 83, 0.5);
+  color: #C66D5E;
+  font-size: 40px;
+  text-align: center;
+  display: none;
+//  visibility: hidden;
+}*/
+
+.startButton,.symbolButton {
+  color: inherit;
+//  background-color: transparent;
+  font-family: inherit;
+  font-size: 20px;
+  width:180px;
+  height: 80px;
+//    visibility: hidden;
+//  z-index: 1;
+}
+
+.startButton:hover,.symbolButton:hover {
+  border-color: inherit;
+  border-style: double;
+  border-radius: 60px;
+}
+
+.field:hover {
+  cursor: pointer;
+}
+
+.symbolButton {
+  font-size: 40px;
+  width:90px;
+  margin-left: 40px;
+  margin-right: 40px;
+}
+
+button {
+  outline: none;
+  border: red;
+  margin: 0 0 0 0 ;
+  padding: 0 0 0 0 ;
+  width:120px;
+  height:120px;
+  background: transparent;
+  float: left;
+  display : block;
+//  background-color: red;
+}
+
+button > span {
+  color: #05262d;
+  position: relative;
+  font-family: 'Walter Turncoat', cursive;
+  font-size: 80px;
+  font-weight: bold;;
+  text-align: center;
+  display: block;
+  width:120px;
+  height:120px;
+//  z-index: 0;
+}
+
+.highlighted {
+  background-color: rgba(74, 34, 71, 0.3);
+  color: #CCAECC;
+}
+
+.header {
+  position: relative;
+  height: 150px;
+}
+
+.reset {
+  color: rgba(103,249,239, 0.6);
+//  background-color: transparent;
+  font-size: 30px;
+  margin: 0 0 0 0;
+  padding: 0 0 0 0;
+  text-align: top;
+  width:auto;
+  height:auto;
+  top: 20px;
+  left: 20px;
+  position: absolute;
+  display: none;
+}
+
+.score {
+  color: rgba(103,249,239, 0.6);;
+  font-size: 13px;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  height:auto;
+  display: none;
+}
+
+.score > #result {
+  font-size: 30px;
+}
+
+.turn {
+  width: auto;
+  height: auto;
+  padding: 5px 20px 5px 20px;
+  position: absolute;
+  background-color: rgba(49, 152, 167, 0.5);
+  border-radius: 10px;
+  bottom: 0px;
+  margin: 0;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  display: none;
+}
+
+
+.turn > span {
+  color: #05262d;
+  font-family: 'Walter Turncoat', cursive;
+  font-size: 25px;
+  font-weight: bold;;
+  text-align: center;
+}
