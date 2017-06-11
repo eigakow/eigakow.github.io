@@ -98,7 +98,7 @@ Game.prototype = {
       console.log("Pressed: " + pressed + ", needed: " + this.buttonSequence[this.orderIn]);
       if (pressed == this.buttonSequence[this.orderIn]) {
         this.orderIn ++;
-        if (this.orderIn == 10) {this.win()}; // change to 20
+        if (this.orderIn == 20) {this.win()};
         return true;
       }
       else {
@@ -122,11 +122,21 @@ Game.prototype = {
     console.log("Failed");
     $("#display").text("FAIL!");
     this.ended = true;
+    var sound = document.getElementById("lost");
+    sound.play();
+    setTimeout(function(){
+      $("#start").trigger("click");
+    }, 5000);
   },
   win: function(){
     console.log("Won!");
     $("#display").text("WON!");
     this.ended = true;
+    var sound = document.getElementById("won");
+    sound.play();
+    setTimeout(function(){
+      $("#start").trigger("click");
+    }, 5000);
   }
 }
 
@@ -188,7 +198,7 @@ $(".around").click(function(){
       console.log("Correct response");
       if (currentGame.checkLastMove()) {
         console.log("Last move in the sequence");
-        $("#display").text("OK!");
+        $("#display").text("OK");
         setTimeout(function(){
           currentGame.addNextMove();
   //        currentGame.displayOrder();

@@ -77,7 +77,7 @@ background-image: url(images_sounds/img-noise-498x498.png);
   border-radius: 0 0 0 225px;
 }
 #yellow.on {
-  background-color: #FFF281;
+  background-color: #FFF7AE;
 }
 #yellow:before {
   top: -134px;
@@ -109,7 +109,7 @@ Control Panel
   margin-right: auto;
   left: 0;
   right: 0;
-  top: 201px;
+  top: 150px;
   width: 220px;
   height: 220px;
   z-index: 1;
