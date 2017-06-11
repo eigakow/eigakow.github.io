@@ -1,0 +1,46 @@
+<html>
+<head>
+ <!-- From bootstrap-->
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>TwitchTV Viewer</title>
+
+  <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Alfa+Slab+One" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+  <div id="mainBoard">
+    <div id="green" class="around" ></div>
+    <div id="red" class="around" ></div>
+    <div id="yellow" class="around" ></div>
+    <div id="blue" class="around" ></div>
+  </div>
+  <div id="controlPanel">
+    <div id="logo">simon</div>
+    <div class="slide" id="onOff">
+      <div class="slideButton" id="onOffButton"></div>
+    </div>
+    <div id="start"></div>
+    <div class="slide" id="strict">
+      <div class="slideButton" id="strictButton"></div>
+    </div>
+    <div class="label" id="onOffL">OFF/ON</div>
+    <div class="label" id="startL">START</div>
+    <div class="label" id="strictL">STRICT</div>
+    <div id="display"></div>
+  </div>
+
+  <audio id="audio1" src="images_sounds/simonSound1.mp3" autostart="false" ></audio>
+  <audio id="audio2" src="images_sounds/simonSound2.mp3" autostart="false" ></audio>
+  <audio id="audio3" src="images_sounds/simonSound3.mp3" autostart="false" ></audio>
+  <audio id="audio4" src="images_sounds/simonSound4.mp3" autostart="false" ></audio>
+  <audio id="error" src="images_sounds/error.mp3" autostart="false" ></audio>
+
+  <script src="jquery/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="script.js" ></script>
+</body>
+</html>
