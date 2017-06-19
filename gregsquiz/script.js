@@ -7,13 +7,45 @@ var question_template = [["What is a relative minor key of major key "],
 var keysMajor = ["A", "B", "C", "D", "E", "F", "G", "Ab", "Bb", "Db", "Eb", "Gb", "F#"];
 var keysMinor = ["a", "b", "c", "d", "e", "f", "g", "bb", "c#", "d#", "eb", "f#", "g#"];
 var chordY = ["1st", "2nd", "3rd", "4th", "5th", "6th", "7th"];
-var chordZ = ["Cmaj7", "G7", "F#m7"]; // add more later on
+var chordZ = ["A", "B", "C", "D", "E", "F", "G",
+              "Am", "Bm", "Cm", "Dm", "Em", "Fm", "Gm",
+              "Amaj7", "Bmaj7", "Cmaj7", "Dmaj7", "Emaj7", "Fmaj7", "Gmaj7",
+              "Amin7", "Bmin7", "Cmin7", "Dmin7", "Emin7", "Fmin7", "Gmin7",
+              "A7", "B7", "C7", "D7", "E7", "F7", "G7"];
 
 var resp0 = ["f#", "g#", "a", "b", "c#", "d", "e", "f", "g", "bb", "c", "eb", "d#"];
 var resp1 = ["C", "D", "Eb", "F", "G", "Ab", "Bb", "Db", "E", "F#", "Gb", "A", "B"];
-var resp2 = [];
-var resp3 = [];
-var resp4 = [];
+var resp2 = [[["A"],["Bm"],["C#m"],["D"],["E7"],["F#m"],["G#dim"]],
+            [["B"],["C#m"],["D#m"],["E"],["F#7"],["G#m"],["A#dim"]],
+            [["C"],["Dm"],["Em"],["F"],["G7"],["Am"],["Bdim"]],
+            [["D"],["Em"],["F#m"],["G"],["A7"],["Bm"],["C#dim"]],
+            [["E"],["F#m"],["G#m"],["A"],["B7"],["C#m"],["D#dim"]],
+            [["F"],["Gm"],["Am"],["Bb"],["C7"],["Dm"],["Edim"]],
+            [["G"],["Am"],["Bm"],["C"],["D7"],["Em"],["F#dim"]],
+            [["Ab"],["Bbm"],["Cm"],["Db"],["Eb7"],["Fm"],["Gdim"]],
+            [["Bb"],["Cm"],["Dm"],["Eb"],["F7"],["Gm"],["Adim"]],
+            [["Db"],["Ebm"],["Fm"],["Gb"],["Ab7"],["Bbm"],["Cdim"]],
+            [["Eb"],["Fm"],["Gm"],["Ab"],["Bb7"],["Cm"],["Ddim"]],
+            [["Gb"],["Abm"],["Bbm"],["Cb"],["Db7"],["Ebm"],["Fdim"]],
+            [["F#"],["G#m"],["A#m"],["B"],["C#7"],["D#m"],["E#dim"]]];
+var resp3 = [[["Am"],["Bdim"],["C"],["Dm"],["Em"],["F"],["G7"]],
+            [["Bm"],["C#dim"],["D"],["Em"],["F#m"],["G"],["A7"]],
+            [["Cm"],["Ddim"],["Eb"],["Fm"],["Gm"],["Ab"],["Bb7"]],
+            [["Dm"],["Edim"],["F"],["Gm"],["Am"],["Bb"],["C7"]],
+            [["Em"],["F#dim"],["G"],["Am"],["Bm"],["C"],["D7"]],
+            [["Fm"],["Gdim"],["Ab"],["Bbm"],["Cm"],["Db"],["Eb7"]],
+            [["Gm"],["Adim"],["Bb"],["Cm"],["Dm"],["Eb"],["F7"]],
+            [["Bbm"],["Cdim"],["Db"],["Ebm"],["Fm"],["Gb"],["Ab7"]],
+            [["C#m"],["D#dim"],["E"],["F#m"],["G#m"],["A"],["B7"]],
+            [["D#m"],["E#dim"],["F#"],["G#m"],["A#m"],["B"],["C#7"]],
+            [["Ebm"],["Fdim"],["Gb"],["Abm"],["Bbm"],["Cb"],["Db7"]],
+            [["F#m"],["G#dim"],["A"],["Bm"],["C#m"],["D"],["E7"]],
+            [["Abm"],["Bbdim"],["Cb"],["Dbm"],["Ebm"],["Fb"],["Gb7"]]];
+var resp4 = ["A C# E", "B D# F#", "C E G", "D F# A", "E G# B", "F A C", "G B D",
+              "A C E", "B D F#", "C Eb G", "D F A", "E G B", "F Ab C", "G Bb D",
+              "A C# E G#", "B D# F# A#", "C E G B", "D F# A C#", "E G# B D#", "F A C E", "G B D F#",
+              "A C E G", "B D F# A", "C Eb G Bb", "D F A C", "E G B D", "F Ab C Eb", "G Bb D F",
+              "A C# E G", "B D# F# A", "C E G Bb ", "D F# A C", "E G# B D", "F A C Eb", "G B D F"];
 
 var curr_q_id = 0;
 var curr_key_id = 0;
@@ -49,7 +81,7 @@ function generateQuestion() {
   }
 
   //var questionNr = getRandomInt(0,question_template.length-1);
-  var questionNr = getRandomInt(0,1);
+  var questionNr = getRandomInt(0,question_template.length-1);
 
   switch (questionNr) {
     case 0:
@@ -116,9 +148,13 @@ function getAnswer() {
      case 1:
       curr_cor_resp = resp1[curr_key_id]; break;
     case 2:
+      console.log("Question type 3, curr_cor_resp: " + resp2[curr_key_id[0]][curr_key_id[1]][0] + ", type of ", typeof resp2[curr_key_id[0]][curr_key_id[1]]);
+      curr_cor_resp = resp2[curr_key_id[0]][curr_key_id[1]][0]; break;
     case 3:
+      console.log("Question type 4, curr_cor_resp: " + resp3[curr_key_id[0]][curr_key_id[1]][0] + ", type of ", typeof resp3[curr_key_id[0]][curr_key_id[1]]);
+      curr_cor_resp = resp3[curr_key_id[0]][curr_key_id[1]][0]; break;
     case 4:
-      curr_cor_resp = "still don't know"; break;
+      curr_cor_resp = resp4[curr_key_id]; break;
     }
 }
 
@@ -138,12 +174,11 @@ function showAnswer(){
 
 function checkAnswer(givenAnswer) {
   getAnswer();
-  if (givenAnswer == curr_cor_resp) {
+  if ((givenAnswer == curr_cor_resp) || ( givenAnswer.toLowerCase() == curr_cor_resp.toLowerCase() && (curr_q_id == 2 || curr_q_id == 3 || curr_q_id == 4))) {
     $( ".form-group" ).addClass( "has-success" );
     win++;
     $('.score').html(win + "/" + rounds);
     console.log("WIN: correct answer", win);
-
   }
   else {
     $( ".form-group" ).addClass( "has-error" );
